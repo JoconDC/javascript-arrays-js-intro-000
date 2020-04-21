@@ -6,10 +6,10 @@ var chocolateBars = [
   'skittles'
 ];
 
-var candyString = 'foo';
+var chips = 'foo';
 
 function addElementToBeginningOfArray(chocolateBars, candyString){
-  return [candyString, ...chocolateBars];
+  return [chips, ...chocolateBars];
 }
 
 function destructivelyAddElementToBeginningOfArray(chocolateBars, candyString){
