@@ -8,20 +8,20 @@ var chocolateBars = [
 
 var chips = 'foo';
 
-function addElementToBeginningOfArray(chocolateBars, candyString){
+function addElementToBeginningOfArray(chocolateBars, chips){
   return [chips, ...chocolateBars];
 }
 
-function destructivelyAddElementToBeginningOfArray(chocolateBars, candyString){
+function destructivelyAddElementToBeginningOfArray(chocolateBars, chips){
   chocolateBars.unshift(chips);
   return chocolateBars;
 }
 
-function addElementToEndOfArray(chocolateBars, candyString){
+function addElementToEndOfArray(chocolateBars, chips){
   return [...chocolateBars, chips];
 }
 
-function destructivelyAddElementToEndOfArray(chocolateBars, candyString){
+function destructivelyAddElementToEndOfArray(chocolateBars, chips){
   chocolateBars.push(chips);
   return chocolateBars;
 }
