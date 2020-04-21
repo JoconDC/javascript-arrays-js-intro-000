@@ -6,64 +6,44 @@ var chocolateBars = [
   'skittles'
 ];
 
-//Adding element at the beginning of the array
-function addElementToBeginningOfArray() {
-  var array = [1];
-  array = ['foo', ...array];
-  return array;
+var candyString = 'foo';
+
+function addElementToBeginningOfArray(chocolateBars, candyString){
+  return [candyString, ...chocolateBars];
 }
 
-// Destructively Add element to the beginning of array
-function destructivelyAddElementToBeginningOfArray(array, "foo") {
-  const array = [1];
-  array = array.unshift("foo");
-  return array;
- }
-
-
-// Adding element at the end of an array
-function addElementToEndOfArray() {
-  var array = [1]
-  array = [...array, 'foo'];
-  return array;
+function destructivelyAddElementToBeginningOfArray(chocolateBars, candyString){
+  chocolateBars.unshift(candyString);
+  return chocolateBars;
 }
 
-// Destructively Add Element to the end of array
-function destructivelyAddElementToEndOfArray() {
-  var array = [1]
-  array.push('foo');
-  return array;
+function addElementToEndOfArray(chocolateBars, candyString){
+  return [...chocolateBars, candyString];
 }
 
-// Accessing an element in an array
-function accessElementInArray() {
-  var array = [1, 2, 3];
-  return (array[2]);
+function destructivelyAddElementToEndOfArray(chocolateBars, candyString){
+  chocolateBars.push(candyString);
+  return chocolateBars;
 }
 
-// Destructively remove an element from end of array
-function destructivelyRemoveElementFromBeginningOfArray() {
-      let array = [1, 2, 3];
-      array.shift();
-      return array;
+function accessElementInArray(array, index){
+  return array[index];
 }
 
-// Remove an element from the beginning of array
- function removeElementFromBeginningOfArray() {
-     const array = [1, 2, 3];
-     return array.slice(-2);
- }
-
-
-// Destructively removing an element in the beginning of the array
-function destructivelyRemoveElementFromEndOfArray() {
-  const array = [1, 2, 3];
-  array.pop();
-  return array;
+function destructivelyRemoveElementFromBeginningOfArray(chocolateBars){
+  chocolateBars.shift();
+  return chocolateBars;
 }
 
-// Slice element from the end array without mutating the array
-function removeElementFromEndOfArray() {
-  let array = [1, 2, 3];
-  return array.slice(0, array.length - 1);
+function removeElementFromBeginningOfArray(chocolateBars){
+  return chocolateBars.slice(1);
+}
+
+function destructivelyRemoveElementFromEndOfArray(chocolateBars){
+  chocolateBars.pop();
+  return chocolateBars;
+}
+
+function removeElementFromEndOfArray(chocolateBars){
+  return chocolateBars.slice(0, chocolateBars.length - 1);
 }
